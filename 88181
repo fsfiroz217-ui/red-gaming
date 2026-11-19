@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Gaming Panel</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #090909;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-box {
+  background: #171717;
+  border: 1px solid #ff2525;
+  box-shadow: 0 0 20px #ff252544;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+}
+
+h2 {
+  color: #ff3030;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  background: #292929;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 7px;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 15px;
+  background: #e60000;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+#message {
+  color: #ff5555;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+  <h2>RED GAMING</h2>
+  <p>Welcome to Gaming Panel</p>
+
+  <input id="username" placeholder="Enter Username">
+
+  <input id="password" type="password"
+  placeholder="Enter Password">
+
+  <button onclick="login()">LOGIN</button>
+
+  <p id="message"></p>
+</div>
+
+<script>
+function login() {
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  if (user === "player" && pass === "1234") {
+    document.getElementById("message").innerText =
+    "Demo Login Successful!";
+  } else {
+    document.getElementById("message").innerText =
+    "Wrong Username or Password!";
+  }
+}
+</script>
+
+</body>
+</html>
